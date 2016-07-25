@@ -1,6 +1,6 @@
 # ng2-material-tooltip
 
-stand alone basic angular2 tooltip. Use material design tooltip guidelines
+stand alone basic angular2 tooltip. Uses material design tooltip guidelines:
 
 https://material.google.com/components/tooltips.html
 
