@@ -7,7 +7,7 @@
   "author": "vladimir-ivanov@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:vladimir-ivanov/ng2-material-tooltip.git"
+    "url": "git+ssh://git@github.com/vladimir-ivanov/ng2-material-tooltip.git"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",
@@ -32,8 +32,7 @@
     "typings": "^0.6.8",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1",
-    "webpack-vendor-chunk-plugin": "^1.0.0",
-    "http-server": "^0.8.5"
+    "webpack-vendor-chunk-plugin": "^1.0.0"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
@@ -53,7 +52,21 @@
     "zone.js": "0.6.12"
   },
   "scripts": {
-    "pack": "./node_modules/.bin/webpack --watch",
-    "start": "./node_modules/.bin/http-server"
-  }
+    "prepublish": "tsc",
+    "watch": "tsc -w ",
+    "pack": "webpack --watch",
+    "start": "http-server"
+  },
+  "bugs": {
+    "url": "https://github.com/vladimir-ivanov/ng2-material-tooltip/issues"
+  },
+  "homepage": "https://github.com/vladimir-ivanov/ng2-material-tooltip#readme",
+  "keywords": [
+    "angular2",
+    "basic",
+    "tooltip",
+    "material",
+    "design",
+    "standalone"
+  ]
 }
