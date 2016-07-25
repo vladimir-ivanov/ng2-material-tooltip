@@ -9,6 +9,7 @@
     "experimentalDecorators": true
   },
   "files": [
+    "typings/browser.d.ts",
     "./src/tooltip/index.ts"
   ],
   "exclude": [
