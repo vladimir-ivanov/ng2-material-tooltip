@@ -1,7 +1,9 @@
 {
   "name": "ng2-material-tooltip",
+  "description": "angular2 material basic standalone tooltip",
   "version": "0.0.1",
-  "license": "Apache License",
+  "license": "MIT",
+  "main": "./src/tooltip/index.ts",
   "author": "vladimir-ivanov@gmail.com",
   "repository": {
     "type": "git",
