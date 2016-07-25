@@ -17,22 +17,21 @@ export class TooltipTextComponent {
     }
 
     public setPosition(hostEl:ElementRef, placement) {
-        this.top = '-1000px';
-        this.left = '-1000px';
+        this.top = "-1000px";
+        this.left = "-1000px";
         this.hostEl = hostEl;
         this.placement = placement;
     }
 
-    public ngAfterViewInit():void {
-        let p = positionService
-            .positionElements(
-                this.hostEl.nativeElement,
-                this.element.nativeElement.children[0],
-                this.placement);
-        this.top = p.top + 'px';
-        this.left = p.left + 'px';
+    public ngAfterViewInit() {
+        let {top, left} = positionService.positionElements(
+            this.hostEl.nativeElement,
+            this.element.nativeElement.children[0],
+            this.placement
+        );
+        this.top = top + "px";
+        this.left = left + "px";
 
         this.changeDetector.detectChanges();
     }
-
 }

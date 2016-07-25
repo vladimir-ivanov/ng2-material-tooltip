@@ -7,7 +7,7 @@ const OFFSET_FROM_PARENT = 14;
 
 export class PositionService {
     /**
-     * Provides read-only equivalent of jQuery's position function:
+     * Provides read-only equivalent of jQuery"s position function:
      * http://api.jquery.com/position/
      */
     public position(nativeEl:HTMLElement):{width:number, height:number, top:number, left:number} {
@@ -30,7 +30,7 @@ export class PositionService {
     }
 
     /**
-     * Provides read-only equivalent of jQuery's offset function:
+     * Provides read-only equivalent of jQuery"s offset function:
      * http://api.jquery.com/offset/
      */
     public offset(nativeEl:any):{width:number, height:number, top:number, left:number} {
@@ -47,9 +47,9 @@ export class PositionService {
      * Provides coordinates for the targetEl in relation to hostEl
      */
     public positionElements(hostEl:HTMLElement, targetEl:HTMLElement, positionStr:string, appendToBody:boolean = false):{top:number, left:number} {
-        let positionStrParts = positionStr.split('-');
+        let positionStrParts = positionStr.split("-");
         let pos0 = positionStrParts[0];
-        let pos1 = positionStrParts[1] || 'center';
+        let pos1 = positionStrParts[1] || "center";
         let hostElPos = appendToBody ?
             this.offset(hostEl) :
             this.position(hostEl);
@@ -81,19 +81,19 @@ export class PositionService {
 
         let targetElPos:{top:number, left:number};
         switch (pos0) {
-            case 'right':
+            case "right":
                 targetElPos = {
                     top: shiftHeight[pos1](),
                     left: shiftWidth[pos0]() + OFFSET_FROM_PARENT
                 };
                 break;
-            case 'left':
+            case "left":
                 targetElPos = {
                     top: shiftHeight[pos1](),
                     left: hostElPos.left - targetElWidth - +OFFSET_FROM_PARENT
                 };
                 break;
-            case 'bottom':
+            case "bottom":
                 targetElPos = {
                     top: shiftHeight[pos0]() + OFFSET_FROM_PARENT,
                     left: shiftWidth[pos1]()
@@ -136,7 +136,7 @@ export class PositionService {
      * @param nativeEl - raw DOM element
      */
     private isStaticPositioned(nativeEl:HTMLElement):boolean {
-        return (this.getStyle(nativeEl, 'position') || 'static' ) === 'static';
+        return (this.getStyle(nativeEl, "position") || "static" ) === "static";
     }
 
     /**

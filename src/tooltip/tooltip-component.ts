@@ -15,38 +15,35 @@ export class TooltipComponent {
                 @Inject(ComponentResolver) private resolver) {
     }
 
-    @HostListener('focusin')
-    @HostListener('mouseenter')
+    @HostListener("focusin")
+    @HostListener("mouseenter")
     show() {
-        let content = this.tooltip;
-
-        if (this.visible) {
-            return;
-        }
-        this.visible = true;
-
-        this.tooltipDeferred = this.resolver.resolveComponent(TooltipTextComponent).then(ref => {
-            let component = this.elementRef.createComponent(ref);
-
-            component.instance.content = content;
-            component.instance.setPosition(this.elementRef.element, this.placement);
-
-            return component;
-        });
-    }
-
-    @HostListener('focusout')
-    @HostListener('mouseleave')
-    hide() {
         if (!this.visible) {
-            return;
-        }
-        this.visible = false;
+            this.visible = true;
 
-        this.tooltipDeferred.then((componentRef:ComponentRef<any>) => {
-            componentRef.destroy();
-            return componentRef;
-        });
+            this.tooltipDeferred = this.resolver.resolveComponent(TooltipTextComponent).then(ref => {
+                let component = this.elementRef.createComponent(ref);
+
+                component.instance.content = this.tooltip;
+                component.instance.setPosition(this.elementRef.element, this.placement);
+
+                return component;
+            });
+        }
     }
 
+    @HostListener("focusout")
+    @HostListener("mouseleave")
+    hide() {
+        if (this.visible) {
+
+            this.visible = false;
+
+            this.tooltipDeferred.then((componentRef:ComponentRef<any>) => {
+                componentRef.destroy();
+                
+                return componentRef;
+            });
+        }
+    }
 }
