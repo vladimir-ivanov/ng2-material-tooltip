@@ -7,3 +7,4 @@ npm-debug.log
 Thumbs.db
 .DS_Store
 # Ignored files
+src

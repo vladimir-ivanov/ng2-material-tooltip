@@ -1,3 +1,3 @@
 "use strict";
 exports.template = "<style>\n    /* Tooltip text */\n    .tooltip-text {\n        text-transform: none;\n        font-size: 10px;\n        font-weight: 500;\n\n        background-color: rgba(97,97,97,0.9);\n        color: #fff;\n        text-align: center;\n        border-radius: 4px;\n\n        /* Position the tooltip text */\n        position: absolute;\n        z-index: 100;\n\n        transition: opacity 1s;\n        height: 22px;\n        line-height: 22px;\n        padding-left: 8px;\n        padding-right: 8px;\n    }\n</style>\n<div class=\"tooltip-text\"  [ngStyle]=\"{top: top, left: left}\">\n{{content}}\n</div>";
-//# sourceMappingURL=tooltip.html.js.map
+//# sourceMappingURL=../../src/tooltip/tooltip.html.js.map

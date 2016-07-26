@@ -1,1 +1,1 @@
-export * from "./src/tooltip/index";
+export * from "./tooltip/index";

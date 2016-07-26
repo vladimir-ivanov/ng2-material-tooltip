@@ -1,5 +1,5 @@
 import {Component, Inject, ElementRef, ChangeDetectorRef, AfterViewInit} from "@angular/core";
-import {positionService} from "./position.ts";
+import {positionService} from "./position";
 import {template} from "./tooltip.html";
 
 @Component({

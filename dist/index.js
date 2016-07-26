@@ -2,5 +2,5 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(require("./tooltip-component.ts"));
-//# sourceMappingURL=index.js.map
+__export(require("./tooltip/index"));
+//# sourceMappingURL=../src/index.js.map
