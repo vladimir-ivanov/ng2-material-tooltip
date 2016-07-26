@@ -1,5 +1,5 @@
 import {Directive, Inject, ComponentResolver, Input, ViewContainerRef, HostListener, ComponentRef} from "@angular/core";
-import {TooltipTextComponent} from "./tooltip-text-component";
+import {TooltipTextComponent} from "./tooltip-text-component.ts";
 
 @Directive({
     selector: "[ng2-md-tooltip]"

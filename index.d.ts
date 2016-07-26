@@ -1,1 +1,1 @@
-export * from "./src/tooltip/index";
+export * from "./src/tooltip/index.d.ts";
