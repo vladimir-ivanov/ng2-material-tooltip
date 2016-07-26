@@ -1,7 +1,7 @@
 {
-  "name": "ng2-material-tooltip",
+  "name": "ng2-material-tooltip-demo",
   "description": "angular2 material basic standalone tooltip",
-  "version": "0.0.15",
+  "version": "0.0.14",
   "license": "MIT",
   "main": "dist/index.js",
   "author": "vladimir-ivanov@gmail.com",
@@ -9,16 +9,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/vladimir-ivanov/ng2-material-tooltip.git"
   },
-  "files": [
-    "dist/**"
-  ],
-  "exclude": [
-    "dist/node_modules",
-    "node_modules",
-    "runtime",
-    "typings/main",
-    "typings/main.d.ts"
-  ],
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -46,16 +36,19 @@
     "typings": "^0.6.8",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1",
-    "webpack-vendor-chunk-plugin": "^1.0.0"
+    "webpack-vendor-chunk-plugin": "^1.0.0",
+    "http-server": "^0.8.5"
   },
-  "peerDependencies": {
-    "@angular/common": "^2.0.0-rc.1",
-    "@angular/compiler": "^2.0.0-rc.1",
-    "@angular/core": "^2.0.0-rc.1",
-    "@angular/http": "^2.0.0-rc.1",
-    "@angular/platform-browser": "^2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "^2.0.0-rc.1",
-    "@angular/platform-server": "^2.0.0-rc.1",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/platform-server": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.2",
+    "ng2-material-tooltip": "0.0.14",
     "core-js": "^2.4.0",
     "flux": "^2.1.1",
     "immutable": "^3.7.6",
@@ -63,14 +56,6 @@
     "rxjs": "5.0.0-beta.6",
     "ts-loader": "0.8.2",
     "zone.js": "0.6.12"
-  },
-  "dependencies": {
-  },
-  "scripts": {
-    "prepublish": "tsc",
-    "watch": "tsc -w ",
-    "pack": "webpack --watch",
-    "start": "http-server"
   },
   "bugs": {
     "url": "https://github.com/vladimir-ivanov/ng2-material-tooltip/issues"

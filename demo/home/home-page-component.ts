@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {template} from "./home-page.html";
-import {TooltipComponent} from "../../src/tooltip/index.ts";
+import {TooltipComponent} from "ng2-material-tooltip/dist/index";
 
 @Component({
     selector: "home",
@@ -9,3 +9,4 @@ import {TooltipComponent} from "../../src/tooltip/index.ts";
 })
 export class HomePageComponent {
 }
+

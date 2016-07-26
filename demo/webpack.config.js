@@ -2,12 +2,12 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './demo/main.ts',
-        vendors: './demo/vendors.ts'
+        app: './main.ts',
+        vendors: './vendors.ts'
     },
     devtool: 'source-map',
     output: {
-        path: __dirname + '/demo/build',
+        path: __dirname + '/build',
         filename: 'bundle.js'
     },
     resolve: {
