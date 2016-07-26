@@ -5,9 +5,10 @@ stand alone basic angular2 tooltip. Uses material design tooltip guidelines:
 https://material.google.com/components/tooltips.html
 
 ##Usages
+`npm install --save ng2-material-tooltip`
 
 ```javascript
-import {TooltipComponent} from "../../src/tooltip/index.ts";
+import {TooltipComponent} from "ng2-material-tooltip/dist/index";
 ```
 
 ```html
