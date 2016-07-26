@@ -1,4 +1,4 @@
-import {Component, Inject, ElementRef, ChangeDetectorRef} from "@angular/core";
+import {Component, Inject, ElementRef, ChangeDetectorRef, AfterViewInit} from "@angular/core";
 import {positionService} from "./position";
 import {template} from "./tooltip.html";
 
@@ -6,7 +6,7 @@ import {template} from "./tooltip.html";
     selector: "tooltip-text",
     template: template
 })
-export class TooltipTextComponent {
+export class TooltipTextComponent implements AfterViewInit {
     top;
     left;
 
@@ -16,14 +16,14 @@ export class TooltipTextComponent {
     constructor(@Inject(ElementRef) private element, @Inject(ChangeDetectorRef) private changeDetector) {
     }
 
-    public setPosition(hostEl:ElementRef, placement) {
+    public setPosition(hostEl:ElementRef, placement):void {
         this.top = "-1000px";
         this.left = "-1000px";
         this.hostEl = hostEl;
         this.placement = placement;
     }
 
-    public ngAfterViewInit() {
+    public ngAfterViewInit():void {
         let {top, left} = positionService.positionElements(
             this.hostEl.nativeElement,
             this.element.nativeElement.children[0],
