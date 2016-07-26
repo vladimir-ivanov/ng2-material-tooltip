@@ -9,7 +9,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require("@angular/core");
-var position_1 = require("./position");
+var position_ts_1 = require("./position.ts");
 var tooltip_html_1 = require("./tooltip.html");
 var TooltipTextComponent = (function () {
     function TooltipTextComponent(element, changeDetector) {
@@ -23,7 +23,7 @@ var TooltipTextComponent = (function () {
         this.placement = placement;
     };
     TooltipTextComponent.prototype.ngAfterViewInit = function () {
-        var _a = position_1.positionService.positionElements(this.hostEl.nativeElement, this.element.nativeElement.children[0], this.placement), top = _a.top, left = _a.left;
+        var _a = position_ts_1.positionService.positionElements(this.hostEl.nativeElement, this.element.nativeElement.children[0], this.placement), top = _a.top, left = _a.left;
         this.top = top + "px";
         this.left = left + "px";
         this.changeDetector.detectChanges();

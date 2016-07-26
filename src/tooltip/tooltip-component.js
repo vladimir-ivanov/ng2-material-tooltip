@@ -9,7 +9,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require("@angular/core");
-var tooltip_text_component_1 = require("./tooltip-text-component");
+var tooltip_text_component_ts_1 = require("./tooltip-text-component.ts");
 var TooltipComponent = (function () {
     function TooltipComponent(elementRef, resolver) {
         this.elementRef = elementRef;
@@ -20,7 +20,7 @@ var TooltipComponent = (function () {
         var _this = this;
         if (!this.visible) {
             this.visible = true;
-            this.tooltipDeferred = this.resolver.resolveComponent(tooltip_text_component_1.TooltipTextComponent).then(function (ref) {
+            this.tooltipDeferred = this.resolver.resolveComponent(tooltip_text_component_ts_1.TooltipTextComponent).then(function (ref) {
                 var component = _this.elementRef.createComponent(ref);
                 component.instance.content = _this.tooltip;
                 component.instance.setPosition(_this.elementRef.element, _this.placement);
