@@ -3,14 +3,14 @@
     "module": "commonjs",
     "target": "es5",
     "noImplicitAny": false,
-    "outDir": "built",
+    "outDir": ".",
     "rootDir": ".",
     "sourceMap": true,
     "experimentalDecorators": true
   },
   "files": [
     "typings/browser.d.ts",
-    "./src/tooltip/index.ts"
+    "./index.ts"
   ],
   "exclude": [
     "node_modules"
