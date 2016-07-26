@@ -1,7 +1,7 @@
 {
   "name": "ng2-material-tooltip",
   "description": "angular2 material basic standalone tooltip",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "main": "dist/index.js",
   "author": "vladimir-ivanov@gmail.com",
