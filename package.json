@@ -1,7 +1,7 @@
 {
   "name": "ng2-material-tooltip",
   "description": "angular2 material basic standalone tooltip",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "MIT",
   "main": "dist/index.js",
   "author": "vladimir-ivanov@gmail.com",
@@ -48,15 +48,14 @@
     "webpack-dev-server": "^1.12.1",
     "webpack-vendor-chunk-plugin": "^1.0.0"
   },
-  "dependencies": {
-    "@angular/common": "2.0.0-rc.1",
-    "@angular/compiler": "2.0.0-rc.1",
-    "@angular/core": "2.0.0-rc.1",
-    "@angular/http": "2.0.0-rc.1",
-    "@angular/platform-browser": "2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
-    "@angular/platform-server": "2.0.0-rc.1",
-    "@angular/router": "3.0.0-beta.2",
+  "peerDependencies": {
+    "@angular/common": "^2.0.0-rc.1",
+    "@angular/compiler": "^2.0.0-rc.1",
+    "@angular/core": "^2.0.0-rc.1",
+    "@angular/http": "^2.0.0-rc.1",
+    "@angular/platform-browser": "^2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.1",
+    "@angular/platform-server": "^2.0.0-rc.1",
     "core-js": "^2.4.0",
     "flux": "^2.1.1",
     "immutable": "^3.7.6",
@@ -64,6 +63,8 @@
     "rxjs": "5.0.0-beta.6",
     "ts-loader": "0.8.2",
     "zone.js": "0.6.12"
+  },
+  "dependencies": {
   },
   "scripts": {
     "prepublish": "tsc",
