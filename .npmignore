@@ -1,5 +1,4 @@
 # Node generated files
-node_modules
 .idea
 *.iml
 npm-debug.log
@@ -8,3 +7,4 @@ Thumbs.db
 .DS_Store
 # Ignored files
 src
+node_modules
